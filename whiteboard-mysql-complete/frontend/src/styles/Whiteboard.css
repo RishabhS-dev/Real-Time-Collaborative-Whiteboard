@@ -1,0 +1,94 @@
+.whiteboard-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #e0f7ff, #eef2ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.board-info h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #7c5cff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tool-btn {
+  background: white;
+  border: 2px solid #e5e7eb;
+  padding: 0.6rem 0.8rem;
+  border-radius: 18px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tool-btn:hover {
+  transform: rotate(-4deg) scale(1.15);
+  box-shadow: 0 8px 20px rgba(124, 92, 255, 0.3);
+}
+
+.tool-btn:nth-child(odd):hover {
+  transform: rotate(4deg) scale(1.15);
+}
+
+.tool-btn.active {
+  background: linear-gradient(135deg, #7c5cff, #00c6ff);
+  color: white;
+  border: none;
+}
+
+.color-picker,
+.width-select {
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  padding: 0.5rem;
+}
+
+.whiteboard-canvas {
+  background: white;
+  margin: 2rem auto;
+  border: 3px solid transparent;
+  background:
+          linear-gradient(white, white) padding-box,
+          linear-gradient(135deg, #7c5cff, #00c6ff) border-box;
+  border-radius: 28px;
+  box-shadow:
+          0 20px 40px rgba(124, 92, 255, 0.15),
+          inset 0 1px 0 rgba(255,255,255,0.6);
+  cursor: none;
+  transition: transform 0.1s ease;
+}
+
+.whiteboard-canvas:active {
+  transform: scale(0.995);
+}
+
+.cursor-dot {
+  width: 14px;
+  height: 14px;
+  background: #7c5cff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px #7c5cff, 0 0 25px rgba(124,92,255,0.4);
+  z-index: 9999;
+}
