@@ -1,4 +1,4 @@
-# 🎨 Collaborative Whiteboard - MySQL Edition
+# 🎨 Collaborative Whiteboard 
 
 **Real-time collaborative whiteboard with Spring Boot & React**
 
